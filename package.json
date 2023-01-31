@@ -1,6 +1,6 @@
 {
   "name": "@redon-web/cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "redon-web command lint tools",
   "author": {
     "name": "Redon",
