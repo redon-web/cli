@@ -10,8 +10,8 @@ export const types = [
   { value: 'build', title: 'build:    依赖相关的内容' },
   { value: 'ci', title: 'ci:       CI配置相关，例如对k8s，docker的配置文件的修改' },
   { value: 'chore', title: 'chore:    改变构建流程、或者增加依赖库、工具等' },
-  { value: 'revert', title: 'revert:   回滚到上一个版本' }
-];
+  { value: 'revert', title: 'revert:   回滚到上一个版本' },
+]
 
 export const scopes = [
   ['projects', '项目搭建'],
@@ -23,10 +23,10 @@ export const scopes = [
   ['deps', '项目依赖'],
   ['auth', '对 auth 修改'],
   ['release', '版本发布'],
-  ['other', '其他修改']
+  ['other', '其他修改'],
 ].map(([value, description]) => {
   return {
     value,
-    title: `${value.padEnd(30)} (${description})`
-  };
-});
+    title: `${value.padEnd(30)} (${description})`,
+  }
+})

@@ -1,44 +1,44 @@
 #!/usr/bin/env node
-import { program } from "commander";
-import { blue } from "kolorist";
-import pkg from "../package.json";
-import { gitCommit, verifyGitCommit } from "./command";
-import { cleanup, initSimpleGitHooks, updatePkg } from "./scripts";
+import { program } from 'commander'
+import { blue } from 'kolorist'
+import pkg from '../package.json'
+import { gitCommit, verifyGitCommit } from './command'
+import { cleanup, initSimpleGitHooks, updatePkg } from './scripts'
 
 program
-  .command("git-commit")
-  .description("生成符合 Angular 规范的 git commit")
+  .command('git-commit')
+  .description('生成符合 Angular 规范的 git commit')
   .action(() => {
-    gitCommit();
-  });
+    gitCommit()
+  })
 
 program
-  .command("git-commit-verify")
-  .description("校验git的commit是否符合 Angular 规范")
+  .command('git-commit-verify')
+  .description('校验git的commit是否符合 Angular 规范')
   .action(() => {
-    verifyGitCommit();
-  });
+    verifyGitCommit()
+  })
 
 program
-  .command("cleanup")
-  .description("清空依赖和构建产物")
+  .command('cleanup')
+  .description('清空依赖和构建产物')
   .action(() => {
-    cleanup();
-  });
+    cleanup()
+  })
 
 program
-  .command("init-git-hooks")
-  .description("初始化git钩子")
+  .command('init-git-hooks')
+  .description('初始化git钩子')
   .action(() => {
-    initSimpleGitHooks();
-  });
+    initSimpleGitHooks()
+  })
 
 program
-  .command("update-pkg")
-  .description("升级依赖")
+  .command('update-pkg')
+  .description('升级依赖')
   .action(() => {
-    updatePkg();
-  });
+    updatePkg()
+  })
 
 // 配置options
 // program
@@ -48,7 +48,7 @@ program
 
 program
   .version(pkg.version)
-  .description(blue("redon-web alias rd\n\nhttps://github.com/redon-web/cli"));
+  .description(blue('redon-web alias rd\n\nhttps://github.com/redon-web/cli'))
 
 // 接管命令行输入，参数处理
-program.parse(process.argv);
+program.parse(process.argv)

@@ -20,6 +20,7 @@
     "prompts": "^2.4.2"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.35.1",
     "@redon-web/cli": "workspace:*",
     "@types/prompts": "^2.4.2",
     "bumpp": "^8.2.1",
