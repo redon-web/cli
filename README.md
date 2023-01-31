@@ -1,4 +1,4 @@
-@ @redon-web/cli
+@redon-web/cli
 
 redon-web command lint tools
 
