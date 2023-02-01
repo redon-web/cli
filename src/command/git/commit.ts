@@ -1,6 +1,6 @@
-import prompts from 'prompts'
-import execa from 'execa'
-import { scopes, types } from './config'
+import prompts from 'prompts';
+import execa from 'execa';
+import { scopes, types } from './config';
 
 export async function gitCommit() {
   const result = await prompts([
@@ -8,22 +8,22 @@ export async function gitCommit() {
       name: 'types',
       type: 'select',
       message: '请选择提交的类型',
-      choices: types,
+      choices: types
     },
     {
       name: 'scopes',
       type: 'select',
       message: '选择一个scope',
-      choices: scopes,
+      choices: scopes
     },
     {
       name: 'description',
       type: 'text',
-      message: '请输入提交描述',
-    },
-  ])
+      message: '请输入提交描述'
+    }
+  ]);
 
-  const commitMsg = `${result.types}(${result.scopes}): ${result.description}`
+  const commitMsg = `${result.types}(${result.scopes}): ${result.description}`;
 
-  execa('git', ['commit', '-m', commitMsg], { stdio: 'inherit' })
+  execa('git', ['commit', '-m', commitMsg], { stdio: 'inherit' });
 }

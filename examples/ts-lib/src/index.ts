@@ -1,3 +1,3 @@
 export function tsLibFn() {
-  return 'tsLibFn'
+  return 'tsLibFn';
 }

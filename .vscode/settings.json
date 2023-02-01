@@ -4,13 +4,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "cSpell.words": [
-    "antfu",
-    "bumpp",
-    "EDITMSG",
-    "esno",
-    "execa",
-    "kolorist",
-    "tsup"
-  ]
+  "cSpell.words": ["antfu", "bumpp", "EDITMSG", "esno", "execa", "kolorist", "tsup"]
 }

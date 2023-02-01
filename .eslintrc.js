@@ -1,11 +1,11 @@
 module.exports = {
-  extends: ['@antfu'],
+  extends: ['redon'],
   overrides: [
     {
       files: ['src/scripts/*.ts', 'scripts/*.ts'],
       rules: {
-        'no-unused-expressions': 'off',
-      },
-    },
-  ],
-}
+        'no-unused-expressions': 'off'
+      }
+    }
+  ]
+};
