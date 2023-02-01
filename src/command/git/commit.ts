@@ -1,6 +1,6 @@
 import prompts from 'prompts';
 import execa from 'execa';
-import { scopes, types } from './config';
+import { types } from './config';
 
 export async function gitCommit() {
   const result = await prompts([
@@ -12,9 +12,8 @@ export async function gitCommit() {
     },
     {
       name: 'scopes',
-      type: 'select',
-      message: '选择一个scope',
-      choices: scopes
+      type: 'text',
+      message: '请输范围'
     },
     {
       name: 'description',
@@ -23,7 +22,9 @@ export async function gitCommit() {
     }
   ]);
 
-  const commitMsg = `${result.types}(${result.scopes}): ${result.description}`;
+  const scopesString = typeof result.scopes === 'string' && result.scopes !== '' ? `(${result.scopes})` : '';
+
+  const commitMsg = `${result.types}${scopesString}: ${result.description}`;
 
   execa('git', ['commit', '-m', commitMsg], { stdio: 'inherit' });
 }
