@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsup",
     "lint": "eslint . --fix",
-    "commit": "soybean git-commit",
+    "commit": "redon git-commit",
     "esno": "esno",
     "update-pkg": "ncu --deep -u",
     "update-version": "bumpp package.json",
