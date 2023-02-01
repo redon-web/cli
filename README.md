@@ -11,5 +11,5 @@ pnpm i -D @redon-web/cli
 ### Use command
 
 ```bash
-pnpm redon-web -h
+pnpm redon -h
 ```
