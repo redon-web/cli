@@ -1,6 +1,6 @@
 export const types = [
   { value: 'feat', title: 'feat: 新特性或功能' },
-  { value: 'chore', title: 'chore: 缺陷修复' },
+  { value: 'chore', title: 'chore: 其他不修改 src 或测试文件的提交' },
   { value: 'fix', title: 'fix: 缺陷修复' },
   { value: 'docs', title: 'docs: 文档更新' },
   { value: 'style', title: 'style: 代码风格或者组件样式更新' },

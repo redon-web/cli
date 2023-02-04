@@ -13,7 +13,7 @@ export async function gitCommit() {
     {
       name: 'scopes',
       type: 'text',
-      message: '请输范围'
+      message: '请输入提交范围'
     },
     {
       name: 'description',
